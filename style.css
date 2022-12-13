@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    /* declare a color variable */
+    --bg-header-footer-color: #000;
+    --txt-header-footer-color: white;
+}
+
+
+
+body{
+    /* make a gradient background from red to green */
+    background-image: url("./padrao.jpg");
+}
+
+header{
+    /* make big text with white color and suthing background
+    and make it center */
+    text-align: center;
+    font-size: 3.5em;
+    height: 17vh;
+    color: var(--txt-header-footer-color);
+    background: var(--bg-header-footer-color);
+}
+
+section{
+    /* make it be in the center of the window with round borders and a ligth white box */
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    /* background: rgba(9, 21, 194, 0.774); */
+}
+
+section > p{
+    /* make it be in the center of the window with round borders and a ligth white box */
+    background: rgba(255, 255, 255, 0.932);
+    /* box shadow */
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.904);
+    padding: 0.5em;
+    font-size: 2.5em;
+    width: 80%;
+    border-radius: 1em;
+    text-align: center;
+    font-weight: 400;
+}
+
+section > button {
+    /* make it bigger with some padding and a nice color */
+    font-size: 1.5em;
+    padding: 0.5em;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.5s;
+    /* animation to make it bigger */
+    animation: button 1s infinite;
+    
+}
+
+footer{
+    /* make small text with white color and suthing background
+    and make it center and stick to the bottom*/
+    text-align: center;
+    font-size: 1em;
+    color: var(--txt-header-footer-color);
+    background: var(--bg-header-footer-color);
+    height: 3vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
