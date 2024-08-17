@@ -8,14 +8,18 @@ async function get_proverbios() {
   return proverbios.map(e => e.proverbio);
 }
 
-proverbios = get_proverbios()
+async function replace_quote(proverbios) {
+  proverbios.then(
+    data => quote.innerHTML = data[get_random_range(0, data.length)]
+  )
+}
 
+proverbios = get_proverbios()
+replace_quote(proverbios)
 
 let button = document.getElementById('button')
 let quote = document.getElementById('quote')
 
 button.addEventListener('click', () => {
-  proverbios.then(
-    data => quote.innerHTML = data[get_random_range(0, data.length)]
-  )
+  replace_quote(proverbios)
 })
